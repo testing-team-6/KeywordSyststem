@@ -14,7 +14,7 @@ public class OrpUtils {
      */
     public static String  readValue(String a){
         Properties pro=new Properties();
-        String popath=Contants.ObjectReUrl;
+        String popath= Constants.ObjectReUrl;
         String value=null;
         try {
             InputStream in =new BufferedInputStream(new FileInputStream(popath));

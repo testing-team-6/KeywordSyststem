@@ -5,14 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import startEngine.ExcelEngine;
-import utility.Contants;
+import utility.Constants;
 
 //“登陆”相关的关键字操作实现
 public class LoginKeyWords {
     public static WebDriver driver=null;
     public static void OpenBrowser(){
         try {
-            System.setProperty("webdriver.chrome.driver", Contants.driverUrl);
+            System.setProperty("webdriver.chrome.driver", Constants.driverUrl);
             driver= new ChromeDriver();
             driver.manage().window().maximize();
         } catch (Exception e) {
@@ -23,15 +23,15 @@ public class LoginKeyWords {
     }
 
     public static void Navigate() {
-        driver.get(Contants.url);
+        driver.get(Constants.url);
     }
 
     public static void Input_Name() {
-        driver.findElement(By.id("username")).sendKeys(Contants.userName);
+        driver.findElement(By.id("username")).sendKeys(Constants.userName);
     }
 
     public static void Input_Password() {
-        driver.findElement(By.id("password")).sendKeys(Contants.userPassword);
+        driver.findElement(By.id("password")).sendKeys(Constants.userPassword);
     }
 
     public static void Auth_Button() {
@@ -48,7 +48,7 @@ public class LoginKeyWords {
 
     public static void Choose_Project() {
         Select projectList = new Select(driver.findElement(By.id("project-list")));
-        projectList.selectByVisibleText(Contants.projectName);
+        projectList.selectByVisibleText(Constants.projectName);
     }
 
     public static void Login_Button() {

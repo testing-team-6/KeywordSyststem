@@ -1,8 +1,8 @@
 package utility;
 //存放所有用到的固定常量
-public class Contants {
+public class Constants {
     //	定义访问地址
-    public static  String url="http://localhost:8081/tm/web/client/welcome.action#item-management.action";
+    public static  String url="http://localhost:8081/tm/web/client/index.action";
     //	定义驱动路径
     public static String driverUrl="src/chromedriver.exe";
     //	对象仓库文件路径
@@ -15,10 +15,10 @@ public class Contants {
     public static String userPassword="123456";
 
     //选择项目名称
-    public static String projectName = "test0316";
+    public static String projectName = "test0404";
 
     //	Excel的路径和名称
-    public static String excelFile="src/dataEngine/";
+    public static String excelFile="src/main/java/dataEngine/";
     public static String excelName = "这个是需要被下面两个代替的";
     public static String loginExcelName="LoginDataEngine.xls";
     public static String setQuestionExcelName = "SetQuestionDataEngine.xls";
