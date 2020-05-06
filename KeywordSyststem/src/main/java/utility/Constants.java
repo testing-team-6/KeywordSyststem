@@ -35,4 +35,10 @@ public class Constants {
     public static int excelPOCloNum=4;
     public static int excelKWCloNum=5;
     public static int caseResult=6;
+
+    //出题、评审开始结束日期设置
+    public static String authorStartDate = "2020-4-10";
+    public static String authorFinishDate = "2020-4-20";
+    public static String reviewStartDate = "2020-5-10";
+    public static String reviewFinishDate = "2020-5-20";
 }
