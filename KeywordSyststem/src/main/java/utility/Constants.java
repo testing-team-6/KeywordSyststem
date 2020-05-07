@@ -6,7 +6,7 @@ public class Constants {
     //	定义驱动路径
     public static String driverUrl="src/chromedriver.exe";
     //	对象仓库文件路径
-    public static String ObjectReUrl="/src/dataEngine/ObjectRepository";
+    public static String ObjectReUrl="/src/main/java/dataEngine/ObjectRepository";
     //	成功和失败
     public static  String fail="FAIL";
     public static  String pass="PASS";

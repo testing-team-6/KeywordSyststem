@@ -8,7 +8,7 @@ public class Start {
         //LoginKeyWords.OpenBrowser();
 
         //完成所有lab5任务代码后执行
-        Test.Login();
+//        Test.Login();
 //        Test.setQuestion();
     }
 }
