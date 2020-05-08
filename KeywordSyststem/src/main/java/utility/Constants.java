@@ -2,7 +2,10 @@ package utility;
 //存放所有用到的固定常量
 public class Constants {
     //	定义访问地址
-    public static  String url="http://localhost:8081/tm/web/client/index.action";
+//    public static  String url="http://localhost:8081/tm/web/client/index.action";
+    public static  String url="http://localhost:8080/test_maker_war_exploded/web/client/index.action";
+    public static  String url1="http://localhost:8080/test_maker_war_exploded/web/client/welcome.action";
+
     //	定义驱动路径
     public static String driverUrl="src/chromedriver.exe";
     //	对象仓库文件路径

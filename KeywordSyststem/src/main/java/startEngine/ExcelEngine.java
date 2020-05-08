@@ -40,6 +40,7 @@ public class ExcelEngine {
 
                         }
                     }
+                    wait1();
                 }
                 if(bResult == true){
                     ExcelUtils.setCellData(Constants.pass, j, Constants.suitResult, Constants.excelFile+ Constants.excelName, Constants.suitSheet);
@@ -49,6 +50,14 @@ public class ExcelEngine {
                 System.out.println("没有要执行的用例");
                 break;
             }
+        }
+    }
+
+    public static void wait1() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

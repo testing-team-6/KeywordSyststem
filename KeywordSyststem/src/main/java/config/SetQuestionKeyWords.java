@@ -10,11 +10,49 @@ import utility.Constants;
 
 import java.util.List;
 
+import utility.Constants;
+
 //"出题"相关的关键字实现
 public class SetQuestionKeyWords {
     public static WebDriver driver=null;
 
+    //页面
+    public static void PageForward(){
+        try {
+            System.setProperty("webdriver.chrome.driver", Constants.driverUrl);
+            driver= new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.get(Constants.url1);
 
+
+
+            driver.findElement(By.id("username")).sendKeys(Constants.userName);
+            driver.findElement(By.id("password")).sendKeys(Constants.userPassword);
+            driver.findElement(By.id("auth-button")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Select projectList = new Select(driver.findElement(By.id("project-list")));
+            projectList.selectByVisibleText(Constants.projectName);
+            driver.findElement(By.id("login-button")).click();
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
+    }
+    //题目管理、新增题目
+    public static void ManageQuestion_Click(){
+        driver.findElement(By.linkText("题目管理")).click();
+    }
+
+    public static void AddQuestion_Click(){
+        driver.findElement(By.linkText("新增题目")).click();
+    }
 
     //章节、知识点、作者、评审、质管、题目类型、题目语言
     public static void SetChapter(){
@@ -90,6 +128,14 @@ public class SetQuestionKeyWords {
         List<WebElement> table_rows = table.findElements(By.tagName("tr"));
         WebElement question = table_rows.get(table_rows.size()-1);
         question.findElement(By.className("edit-item")).click();
+    }
+
+    public static void wait1() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
