@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.Select;
 import startEngine.ExcelEngine;
 import utility.Constants;
 
+import java.util.List;
+
 //"出题"相关的关键字实现
 public class SetQuestionKeyWords {
     public static WebDriver driver=null;
@@ -79,6 +81,15 @@ public class SetQuestionKeyWords {
 
     public static void SubmitQuestion_Button(){
         driver.findElement(By.id("save-question-btn")).click();
+    }
+    public static void SubmitQuestion1_Button(){
+        driver.findElement(By.id("save-question-btn")).click();
+    }
+    public static void Choose_Question(){
+        WebElement table = driver.findElement(By.id("question-mgmt-table"));
+        List<WebElement> table_rows = table.findElements(By.tagName("tr"));
+        WebElement question = table_rows.get(table_rows.size()-1);
+        question.findElement(By.className("edit-item")).click();
     }
 
 }
