@@ -1,0 +1,25 @@
+
+j	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²û¡Ò8×©£ı.
+o	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎŠ‘şÿÿÿÿ8Îå¿ı.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÚşáÿÿÿÿÿ8 ïü.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùà±ñüÿÿÿÿ8åÊ“ı.
+N
+java:S1444",Make this "public static driver" field final(âØëÁıÿÿÿÿ8à—†û.
+j	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇáÆ¬8à—†û.
+j	java:S100="NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ä«8à—†û.
+o	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼½ Âÿÿÿÿÿ8éÉ§ı.
+o	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÙ”‹øÿÿÿÿ8à—†û.
+o	java:S100L"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÍÎâøÿÿÿÿ8à—†û.
+o	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê€ıÿÿÿÿ8Ÿ²›ı.
+`
+java:S1128"DRemove this unused import 'org.openqa.selenium.chrome.ChromeDriver'.(†È8à—†û.
+j	java:S100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îö»8à—†û.
+t
+java:S1104"RMake driver a static final constant or non-public and provide accessors if needed.(âØëÁıÿÿÿÿ8à—†û.
+j	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Ãì¹8à—†û.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œï¢8à—†û.
+j	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É‰èŞ8à—†û.
+V
+java:S1128"4Remove this unused import 'startEngine.ExcelEngine'.(¬ôğüÿÿÿÿ8à—†û.
+\
+java:S1118":Add a private constructor to hide the implicit public one.(«¤ãûÿÿÿÿ8à—†û.

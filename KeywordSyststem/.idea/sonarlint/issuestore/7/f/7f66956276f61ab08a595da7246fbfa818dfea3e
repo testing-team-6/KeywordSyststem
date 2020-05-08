@@ -1,0 +1,13 @@
+
+p
+java:S1104"ZMake actionKeyWords a static final constant or non-public and provide accessors if needed.(ùÙ Ÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Óµ¨œ
+h	java:S100
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é¼ïÂøÿÿÿÿ
+C
+java:S2440"-Remove this instantiation of "LoginKeyWords".(Ø¾¯Ö
+J
+java:S1444"4Make this "public static actionKeyWords" field final(ùÙ Ÿ
+N
+java:S2440"3Remove this instantiation of "SetQuestionKeyWords".(¸üñÖûÿÿÿÿ

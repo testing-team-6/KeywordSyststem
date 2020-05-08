@@ -1,0 +1,35 @@
+
+I
+java:S1444
+"'Make this "public static r" field final(÷À‰ÿÿÿÿÿ8…‰Úı.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„½Êıÿÿÿÿ8…‰Úı.
+Y
+java:S2589,"7Remove this expression which always evaluates to "true"(ñ¸¾àıÿÿÿÿ8…‰Úı.
+P
+java:S1444	".Make this "public static Keywords" field final(ê¦öÔşÿÿÿÿ8…‰Úı.
+X	java:S125"<This block of commented-out lines of code should be removed.(®‹ß8…‰Úı.
+F
+java:S1125&")Remove the literal "false" boolean value.(üÀ´8…‰Úı.
+v
+java:S1104	"TMake Keywords a static final constant or non-public and provide accessors if needed.(ê¦öÔşÿÿÿÿ8…‰Úı.
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(Ôëôç8…‰Úı.
+J
+java:S1125,"(Remove the literal "true" boolean value.(ñ¸¾àıÿÿÿÿ8…‰Úı.
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ëÉş)8…‰Úı.
+U	java:S1061"9Replace this use of System.out or System.err by a logger.(„ÓıŒ8…‰Úı.
+a
+java:S2583&"DChange this condition so that it does not always evaluate to "false"(üÀ´8…‰Úı.
+u
+java:S3008	"SRename this field "Keywords" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¦öÔşÿÿÿÿ8…‰Úı.
+W
+java:S1118":Add a private constructor to hide the implicit public one.(ßÙıò8…‰Úı.
+u
+java:S1104"SMake bResult a static final constant or non-public and provide accessors if needed.(´¼åşÿÿÿÿ8…‰Úı.
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(±ñË¦ùÿÿÿÿ8…‰Úı.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ñË¦ùÿÿÿÿ8…‰Úı.
+o
+java:S1104
+"MMake r a static final constant or non-public and provide accessors if needed.(÷À‰ÿÿÿÿÿ8…‰Úı.
+O
+java:S1444"-Make this "public static bResult" field final(´¼åşÿÿÿÿ8…‰Úı.
