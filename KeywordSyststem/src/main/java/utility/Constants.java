@@ -2,9 +2,9 @@ package utility;
 //存放所有用到的固定常量
 public class Constants {
     //	定义访问地址
-//    public static  String url="http://localhost:8081/tm/web/client/index.action";
-    public static  String url="http://localhost:8080/test_maker_war_exploded/web/client/index.action";
-    public static  String url1="http://localhost:8080/test_maker_war_exploded/web/client/welcome.action";
+    public static  String url="http://localhost:8081/tm/web/client/index.action";
+//    public static  String url="http://localhost:8080/test_maker_war_exploded/web/client/index.action";
+//    public static  String url1="http://localhost:8080/test_maker_war_exploded/web/client/welcome.action";
 
     //	定义驱动路径
     public static String driverUrl="src/chromedriver.exe";
@@ -44,4 +44,6 @@ public class Constants {
     public static String authorFinishDate = "2020-4-20";
     public static String reviewStartDate = "2020-5-10";
     public static String reviewFinishDate = "2020-5-20";
+
+    public static String questionAuthor = "testadmin";
 }

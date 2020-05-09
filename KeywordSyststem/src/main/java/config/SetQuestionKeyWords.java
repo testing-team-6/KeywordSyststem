@@ -22,7 +22,7 @@ public class SetQuestionKeyWords {
             System.setProperty("webdriver.chrome.driver", Constants.driverUrl);
             driver= new ChromeDriver();
             driver.manage().window().maximize();
-            driver.get(Constants.url1);
+            driver.get(Constants.url);
 
 
 
@@ -47,87 +47,179 @@ public class SetQuestionKeyWords {
     }
     //题目管理、新增题目
     public static void ManageQuestion_Click(){
-        driver.findElement(By.linkText("题目管理")).click();
+        try{
+            driver.findElement(By.linkText("题目管理")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void AddQuestion_Click(){
-        driver.findElement(By.linkText("新增题目")).click();
+        try{
+            driver.findElement(By.linkText("新增题目")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     //章节、知识点、作者、评审、质管、题目类型、题目语言
     public static void SetChapter(){
-        Select chapterList = new Select(driver.findElement(By.id("chapter-select")));
-        chapterList.selectByIndex(0);
+        try{
+            driver.findElement(By.xpath("//*[@id='select2-chapter-select-container']")).click();
+            driver.findElement(By.xpath("//*[@id='select2-chapter-select-results']/li[1]")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SetKnowledgePoint() {
-        Select knowledgeList = new Select(driver.findElement(By.id("knowledge-point-select")));
-        knowledgeList.selectByIndex(0);
+        try{
+            driver.findElement(By.xpath("//*[@id='select2-knowledge-point-select-container']")).click();
+            driver.findElement(By.xpath("//*[@id='select2-knowledge-point-select-results']/li[1]")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SetAuthor(){
-        Select authorList = new Select(driver.findElement(By.id("author-list")));
-        authorList.selectByIndex(1);
+        try{
+            driver.findElement(By.xpath("//*[@id='select2-author-list-container']")).click();
+            driver.findElement(By.xpath("//*[@id='select2-author-list-results']/li[text()='"+Constants.questionAuthor+"']")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SetReviewer(){
-        Select reviewerList = new Select(driver.findElement(By.id("reviewer-list")));
-        reviewerList.selectByIndex(2);
+        try{
+            driver.findElement(By.xpath("//*[@id='select2-reviewer-list-container']")).click();
+            driver.findElement(By.xpath("//*[@id='select2-reviewer-list-results']/li[2]")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SetQuality(){
-        Select qualityList = new Select(driver.findElement(By.id("question-qa-list")));
-        qualityList.selectByIndex(3);
+        try{
+            driver.findElement(By.xpath("//*[@id='select2-question-qa-list-container']")).click();
+            driver.findElement(By.xpath("//*[@id='select2-question-qa-list-results']/li[3]")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SetType(){
-        Select typeList = new Select(driver.findElement(By.id("question-type-list")));
-        typeList.selectByIndex(0);
+        try{
+            driver.findElement(By.xpath("//*[@id='select2-question-type-list-container']")).click();
+            driver.findElement(By.xpath("//*[@id='select2-question-type-list-results']/li[1]")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SetLanguage(){
-        Select languageList = new Select(driver.findElement(By.id("question-language-list")));
-        languageList.selectByIndex(0);
+        try{
+            driver.findElement(By.xpath("//*[@id='select2-question-language-list-container']")).click();
+            driver.findElement(By.xpath("//*[@id='select2-question-language-list-results']/li[1]")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Set_AuthorStartDate() {
+        try{}catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
         driver.findElement(By.id("authorStartDate")).sendKeys(Constants.authorStartDate);
     }
 
     public static void Set_AuthorFinishDate() {
-        driver.findElement(By.id("authorFinishDate")).sendKeys(Constants.authorFinishDate);
+        try{
+            driver.findElement(By.id("authorFinishDate")).sendKeys(Constants.authorFinishDate);
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Set_ReviewStartDate() {
-        driver.findElement(By.id("reviewStartDate")).sendKeys(Constants.reviewStartDate);
+        try{
+            driver.findElement(By.id("reviewStartDate")).sendKeys(Constants.reviewStartDate);
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Set_ReviewFinishDate() {
-        driver.findElement(By.id("reviewFinishDate")).sendKeys(Constants.reviewFinishDate);
+        try{
+            driver.findElement(By.id("reviewFinishDate")).sendKeys(Constants.reviewFinishDate);
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SetQuestionStart(){
-        driver.findElement(By.id("submit-n-transit-btn")).click();
+        try{
+            driver.findElement(By.id("submit-n-transit-btn")).click();
 
-        WebElement ul = driver.findElement(By.id("transition-dropdown"));
-        ul.findElement(By.cssSelector("li ~ li")).click();
+            WebElement ul = driver.findElement(By.id("transition-dropdown"));
+            ul.findElement(By.cssSelector("li ~ li")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Confirm(){
-        driver.findElement(By.id("f4b5cb8e-41e6-4093-ac71-dc5358cff07a")).click();
+        try{
+            driver.findElement(By.id("f4b5cb8e-41e6-4093-ac71-dc5358cff07a")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void SubmitQuestion_Button(){
-        driver.findElement(By.id("save-question-btn")).click();
+        try{
+            driver.findElement(By.id("save-question-btn")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
+
+    //新建考题的提交题目
     public static void SubmitQuestion1_Button(){
-        driver.findElement(By.id("save-question-btn")).click();
+        try{
+            driver.findElement(By.xpath("//*[@id='save-question-btn']")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
+
     public static void Choose_Question(){
-        WebElement table = driver.findElement(By.id("question-mgmt-table"));
-        List<WebElement> table_rows = table.findElements(By.tagName("tr"));
-        WebElement question = table_rows.get(table_rows.size()-1);
-        question.findElement(By.className("edit-item")).click();
+        try{
+            WebElement table = driver.findElement(By.id("question-mgmt-table"));
+            List<WebElement> table_rows = table.findElements(By.tagName("tr"));
+            WebElement question = table_rows.get(table_rows.size()-1);
+            question.findElement(By.className("edit-item")).click();
+        }catch (Exception e) {
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void wait1() {
