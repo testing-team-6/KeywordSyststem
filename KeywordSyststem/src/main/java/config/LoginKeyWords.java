@@ -23,19 +23,41 @@ public class LoginKeyWords {
     }
 
     public static void Navigate() {
-        driver.get(Constants.url);
+        try{
+            driver.get(Constants.url);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Input_Name() {
-        driver.findElement(By.id("username")).sendKeys(Constants.userName);
+        try{
+            driver.findElement(By.id("username")).sendKeys(Constants.userName);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Input_Password() {
-        driver.findElement(By.id("password")).sendKeys(Constants.userPassword);
+        try {
+            driver.findElement(By.id("password")).sendKeys(Constants.userPassword);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
+
     }
 
     public static void Auth_Button() {
-        driver.findElement(By.id("auth-button")).click();
+        try{
+            driver.findElement(By.id("auth-button")).click();
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
+
     }
 
     public static void Wait() {
@@ -47,11 +69,21 @@ public class LoginKeyWords {
     }
 
     public static void Choose_Project() {
-        Select projectList = new Select(driver.findElement(By.id("project-list")));
-        projectList.selectByVisibleText(Constants.projectName);
+        try {
+            Select projectList = new Select(driver.findElement(By.id("project-list")));
+            projectList.selectByVisibleText(Constants.projectName);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Login_Button() {
-        driver.findElement(By.id("login-button")).click();
+        try {
+            driver.findElement(By.id("login-button")).click();
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 }
