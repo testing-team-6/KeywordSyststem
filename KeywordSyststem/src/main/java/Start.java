@@ -11,17 +11,6 @@ public class Start {
         try {
 //            Test.Login();
             Test.setQuestion();
-//            SetQuestionKeyWords.PageForward();
-//            SetQuestionKeyWords.wait1();
-//            SetQuestionKeyWords.ManageQuestion_Click();
-//            SetQuestionKeyWords.wait1();
-//            SetQuestionKeyWords.Choose_Question();
-//            SetQuestionKeyWords.wait1();
-//            SetQuestionKeyWords.SetQuestionStart();
-//            SetQuestionKeyWords.wait1();
-//            SetQuestionKeyWords.Confirm();
-//            SetQuestionKeyWords.wait1();
-//            SetQuestionKeyWords.SubmitQuestion_Button();
         }catch (Exception e){
             e.printStackTrace();
         }
