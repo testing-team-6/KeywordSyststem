@@ -165,6 +165,7 @@ public class SetQuestionKeyWords {
     public static void Set_ReviewFinishDate() {
         try{
             driver.findElement(By.id("reviewFinishDate")).sendKeys(Constants.reviewFinishDate);
+            driver.findElement(By.tagName("legend")).click();
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
@@ -195,6 +196,7 @@ public class SetQuestionKeyWords {
     public static void SubmitQuestion_Button(){
         try{
             driver.findElement(By.id("save-question-btn")).click();
+            driver.findElement(By.className("btn-default")).click();
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
@@ -205,6 +207,8 @@ public class SetQuestionKeyWords {
     public static void SubmitQuestion1_Button(){
         try{
             driver.findElement(By.id("save-question-btn")).click();
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("/html/body/div[5]/div/div/div[3]/div/div/button")).click();
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
