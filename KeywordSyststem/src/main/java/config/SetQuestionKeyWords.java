@@ -137,11 +137,13 @@ public class SetQuestionKeyWords {
     }
 
     public static void Set_AuthorStartDate() {
-        try{}catch (Exception e) {
+        try{
+            driver.findElement(By.id("authorStartDate")).sendKeys(Constants.authorStartDate);
+        }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
         }
-        driver.findElement(By.id("authorStartDate")).sendKeys(Constants.authorStartDate);
+
     }
 
     public static void Set_AuthorFinishDate() {
@@ -175,9 +177,7 @@ public class SetQuestionKeyWords {
     public static void SetQuestionStart(){
         try{
             driver.findElement(By.id("submit-n-transit-btn")).click();
-
-            WebElement ul = driver.findElement(By.id("transition-dropdown"));
-            ul.findElement(By.cssSelector("li ~ li")).click();
+            driver.findElement(By.xpath("//*[@id=\"transition-dropdown\"]/li/a")).click();
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
@@ -186,7 +186,7 @@ public class SetQuestionKeyWords {
 
     public static void Confirm(){
         try{
-            driver.findElement(By.id("f4b5cb8e-41e6-4093-ac71-dc5358cff07a")).click();
+            driver.findElement(By.xpath("/html/body/div[6]/div/div/div[3]/div/div/button[2]")).click();
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
@@ -196,7 +196,12 @@ public class SetQuestionKeyWords {
     public static void SubmitQuestion_Button(){
         try{
             driver.findElement(By.id("save-question-btn")).click();
+<<<<<<< HEAD
             driver.findElement(By.className("btn-default")).click();
+=======
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("/html/body/div[5]/div/div/div[3]/div/div/button")).click();
+>>>>>>> ab81d68f7901b3eacd9ffa2f34812cd9532caf11
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
