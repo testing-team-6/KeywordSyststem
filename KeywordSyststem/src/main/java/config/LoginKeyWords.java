@@ -5,14 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import startEngine.ExcelEngine;
-import utility.Contants;
+import utility.Constants;
 
 //“登陆”相关的关键字操作实现
 public class LoginKeyWords {
     public static WebDriver driver=null;
     public static void OpenBrowser(){
         try {
-            System.setProperty("webdriver.chrome.driver", Contants.driverUrl);
+            System.setProperty("webdriver.chrome.driver", Constants.driverUrl);
             driver= new ChromeDriver();
             driver.manage().window().maximize();
         } catch (Exception e) {
@@ -23,19 +23,41 @@ public class LoginKeyWords {
     }
 
     public static void Navigate() {
-        driver.get(Contants.url);
+        try{
+            driver.get(Constants.url);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Input_Name() {
-        driver.findElement(By.id("username")).sendKeys(Contants.userName);
+        try{
+            driver.findElement(By.id("username")).sendKeys(Constants.userName);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Input_Password() {
-        driver.findElement(By.id("password")).sendKeys(Contants.userPassword);
+        try {
+            driver.findElement(By.id("password")).sendKeys(Constants.userPassword);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
+
     }
 
     public static void Auth_Button() {
-        driver.findElement(By.id("auth-button")).click();
+        try{
+            driver.findElement(By.id("auth-button")).click();
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
+
     }
 
     public static void Wait() {
@@ -47,11 +69,21 @@ public class LoginKeyWords {
     }
 
     public static void Choose_Project() {
-        Select projectList = new Select(driver.findElement(By.id("project-list")));
-        projectList.selectByVisibleText(Contants.projectName);
+        try {
+            Select projectList = new Select(driver.findElement(By.id("project-list")));
+            projectList.selectByVisibleText(Constants.projectName);
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 
     public static void Login_Button() {
-        driver.findElement(By.id("login-button")).click();
+        try {
+            driver.findElement(By.id("login-button")).click();
+        }catch (Exception e){
+            e.printStackTrace();
+            ExcelEngine.bResult=false;
+        }
     }
 }
