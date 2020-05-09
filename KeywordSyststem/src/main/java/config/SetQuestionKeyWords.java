@@ -1,6 +1,7 @@
 package config;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -203,7 +204,7 @@ public class SetQuestionKeyWords {
     //新建考题的提交题目
     public static void SubmitQuestion1_Button(){
         try{
-            driver.findElement(By.xpath("//*[@id='save-question-btn']")).click();
+            driver.findElement(By.id("save-question-btn")).click();
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
@@ -214,8 +215,9 @@ public class SetQuestionKeyWords {
         try{
             WebElement table = driver.findElement(By.id("question-mgmt-table"));
             List<WebElement> table_rows = table.findElements(By.tagName("tr"));
-            WebElement question = table_rows.get(table_rows.size()-1);
-            question.findElement(By.className("edit-item")).click();
+            ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
+            Thread.sleep(1000);
+            table_rows.get(table_rows.size()-1).findElement(By.className("edit-item")).click();
         }catch (Exception e) {
             e.printStackTrace();
             ExcelEngine.bResult=false;
